@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="ca.georgiancollege.librarymanagementsystem.SystemController">
+   <left>
+      <VBox fx:id="menuArea" alignment="TOP_CENTER" prefHeight="800.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="107.0" prefWidth="280.0">
+               <children>
+                  <ImageView fitHeight="73.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/library-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="BASELINE_CENTER" contentDisplay="BOTTOM" text="Library">
+                     <font>
+                        <Font name="Bell MT Bold" size="29.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="60.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="homeSection" alignment="CENTER" prefHeight="60.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/home-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Home">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="70.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="booksSection" alignment="CENTER" prefHeight="60.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/books-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Books">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="membersSection" alignment="CENTER" prefHeight="60.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="43.0" layoutX="100.0" pickOnBounds="true" preserveRatio="true" x="100.0">
+                     <image>
+                        <Image url="@../../../images/members-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Members">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="loansSection" alignment="CENTER" prefHeight="60.0" prefWidth="280.0">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/loans-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Loans">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane fx:id="contentArea" prefHeight="800.0" prefWidth="1220.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
