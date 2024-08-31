@@ -33,7 +33,6 @@ public class LoginController {
             Stage stage = (Stage) usernameField.getScene().getWindow();
             stage.close();
             System.out.println("Login successfully");
-
             // open new scene
 //            try {
 //                MainApp mainApp = new MainApp();
