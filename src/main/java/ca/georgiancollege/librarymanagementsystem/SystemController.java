@@ -8,6 +8,8 @@ import javafx.scene.layout.VBox;
 import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 public class SystemController {
     @FXML
@@ -26,15 +28,19 @@ public class SystemController {
     private VBox menuArea;
     @FXML
     private BorderPane contentArea;
+    private List<HBox> sections;
 
     @FXML
     public void initialize() {
-//        loadView("home-view.fxml");
-        // load seperate views
-        homeSection.setOnMouseClicked(event -> loadView("home-view.fxml"));
-        booksSection.setOnMouseClicked(event -> loadView("books-view.fxml"));
-        loansSection.setOnMouseClicked(event -> loadView("loans-view.fxml"));
-        membersSection.setOnMouseClicked(event -> loadView("members-view.fxml"));
+        sections = Arrays.asList(homeSection, booksSection, loansSection, membersSection);
+
+        // -----set click events to each sections
+        for (HBox section : sections) {
+            section.setOnMouseClicked(event -> handleSectionClick(section));
+        }
+
+        // -------display home view by default
+        handleSectionClick(homeSection);
     }
 
     private void loadView(String fxmlFile) {
@@ -45,6 +51,30 @@ public class SystemController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void handleSectionClick(HBox clickedSection) {
+        // -------clear selected first
+        for (HBox section : sections) {
+            section.getStyleClass().remove("selected");
+        }
+
+        // -----then add selected section
+        clickedSection.getStyleClass().add("selected");
+
+        // ---------load views accordingly
+        String viewFile = "";
+        if (clickedSection == homeSection) {
+            viewFile = "home-view.fxml";
+        } else if (clickedSection == booksSection) {
+            viewFile = "books-view.fxml";
+        } else if (clickedSection == loansSection) {
+            viewFile = "loans-view.fxml";
+        } else if (clickedSection == membersSection) {
+            viewFile = "members-view.fxml";
+        }
+
+        loadView(viewFile);
     }
 
 }

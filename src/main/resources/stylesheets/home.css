@@ -1,0 +1,24 @@
+#numSection1{
+    -fx-background-color: #74b9ff;
+    /*-fx-border-radius: 10%;*/
+    /*-fx-background-radius: 10%;*/
+}
+#numSection2{
+    -fx-background-color: #81ecec;
+}
+#numSection3{
+    -fx-background-color: #ffeaa7;
+}
+#numSection4{
+    -fx-background-color: #fab1a0;
+}
+#lineChartSection{
+    -fx-background-color: white;
+}
+#pieChartSection{
+    -fx-background-color: white;
+}
+
+BorderPane{
+    -fx-background-color: #F5F5F5;
+}

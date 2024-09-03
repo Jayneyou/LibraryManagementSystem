@@ -1,11 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1220.0" stylesheets="@../../../stylesheets/home.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.librarymanagementsystem.HomeViewController">
+   <top>
+      <HBox prefHeight="221.0" prefWidth="1220.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <VBox fx:id="numSection1" alignment="CENTER_LEFT" prefHeight="221.0" prefWidth="305.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/add-user.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label text="Total Members">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numOfMembers" text="Label">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="30.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox fx:id="numSection2" alignment="CENTER_LEFT" prefHeight="221.0" prefWidth="305.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/study.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label text="Books on Loan">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Georgia" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numOfLoanBooks" text="Label">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox fx:id="numSection3" alignment="CENTER_LEFT" prefHeight="221.0" prefWidth="305.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/storytelling.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label text="Available Books">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numOfAvailableBooks" text="Label">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox fx:id="numSection4" alignment="CENTER_LEFT" prefHeight="221.0" prefWidth="305.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/time.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label text="Books Overdue">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numOfOverdueBooks" text="Label">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="20.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
    <left>
-      <Label text="Label" BorderPane.alignment="CENTER" />
+      <VBox fx:id="lineChartSection" alignment="CENTER" prefHeight="579.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="30.0" right="20.0" top="30.0" />
+         </BorderPane.margin>
+         <children>
+            <LineChart fx:id="lineChart">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </LineChart>
+         </children>
+      </VBox>
    </left>
+   <center>
+      <VBox fx:id="pieChartSection" alignment="CENTER" prefHeight="579.0" prefWidth="461.0" BorderPane.alignment="CENTER">
+         <children>
+            <PieChart fx:id="pieChart">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </PieChart>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" right="20.0" top="30.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
 </BorderPane>

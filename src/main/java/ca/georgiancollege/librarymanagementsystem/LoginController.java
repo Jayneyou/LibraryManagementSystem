@@ -32,8 +32,8 @@ public class LoginController {
         String username = usernameField.getText();
         String password = passwordField.getText();
         passwordField.setText("");
-        if (username.equals("admin") && password.equals("password")) {
-            System.out.println("Login successfully");
+//        if (username.equals("admin") && password.equals("password")) {
+//            System.out.println("Login successfully");
 
             // open new scene
             try {
@@ -52,8 +52,9 @@ public class LoginController {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else {
-            errorMessageLabel.setText("Invalid credentials!");
         }
-    }
+//        else {
+//            errorMessageLabel.setText("Invalid credentials!");
+//        }
+//    }
 }
