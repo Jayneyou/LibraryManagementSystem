@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="226a8fe5-4ca3-46b8-9e3b-9529c2ff343e" name="Changes" comment="login view done">
+    <list default="true" id="226a8fe5-4ca3-46b8-9e3b-9529c2ff343e" name="Changes" comment="home view done">
       <change afterPath="$PROJECT_DIR$/src/main/resources/images/add-user.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/images/book-icon.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/images/books-icon2.png" afterDir="false" />
@@ -127,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725063826798</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="home view done">
+      <option name="closed" value="true" />
+      <created>1725387257680</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725387257680</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +143,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login view done" />
-    <option name="LAST_COMMIT_MESSAGE" value="login view done" />
+    <MESSAGE value="home view done" />
+    <option name="LAST_COMMIT_MESSAGE" value="home view done" />
   </component>
 </project>
